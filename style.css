@@ -1,3 +1,44 @@
+/* hoverdisplay */
+
+
+
+.USERNAME,
+.FURTHERdetails {
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.USERNAME {
+  display: block;
+}
+
+.FURTHERdetails {
+  display: none;
+}
+
+.wrapper {
+  width: auto;
+  display: inline-block;
+  background-color: red;
+}
+
+.wrapper:hover .USERNAME {
+  display: none;
+}
+
+.wrapper:hover .FURTHERdetails {
+  display: block;
+}
+
+/* hoverdisplay */
+
+
+
+
+/*  clickdrag.js */ 
+
 .draggable {
   position: absolute;
   width: 100px;
@@ -27,3 +68,5 @@
  top: 230px;
  left: 10px;
 }
+
+/*  clickdrag.js */ 
