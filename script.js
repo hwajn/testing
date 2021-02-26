@@ -1,6 +1,6 @@
 console.clear();
 
-var app = new PIXI.Application(500, 480, {
+var app = new PIXI.Application(window.innerWidth, window.innerWidth, {
   autoStart: false, 
   backgroundColor: 0x000000, 
   view: myCanvas
@@ -29,8 +29,8 @@ app.loader.load(function(loader, resources) {
     brush.anchor.set(0);
     displacementFilter = new PIXI.filters.DisplacementFilter(brush);
     container.filters = [displacementFilter];
-    displacementFilter.scale.x = 20;
-    displacementFilter.scale.y = 20;
+    displacementFilter.scale.x = 10;
+    displacementFilter.scale.y = 10;
   
     container.addChild(bg, brush);
   
