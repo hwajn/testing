@@ -1,8 +1,8 @@
 console.clear();
 
-var app = new PIXI.Application(window.innerWidth, window.innerWidth, {
-  autoStart: false, 
-  backgroundColor: 0x000000, 
+var app = new PIXI.Application(window.innerWidth, window.innerHeight, {
+  autoStart: true, 
+  backgroundColor: 0xFFFFFF, 
   view: myCanvas
 });
 
@@ -19,8 +19,8 @@ app.loader.add('bg', 'https://raw.githubusercontent.com/hwajn/testing/main/homep
 app.loader.add('one', 'https://raw.githubusercontent.com/PavelLaptev/test-rep/master/dis-varOne.png');
 app.loader.load(function(loader, resources) {
     var tempBg = new PIXI.Sprite(resources.bg.texture);
-    tempBg.width = app.screen.width;
-    tempBg.height = app.screen.height; 
+    tempBg.width = window.innerWidth;
+    tempBg.height = window.innerHeight; 
   
     app.renderer.render(tempBg, rt[0]);
     bg = new PIXI.Sprite(rt[0]);
@@ -70,3 +70,5 @@ function onPointerMove(event) {
 function onPointerUp() {
     dragging = false;
 }
+
+
