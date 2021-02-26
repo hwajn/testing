@@ -15,7 +15,7 @@ var bg, brush, displacementFilter;
 var container = new PIXI.Container(); 
 app.stage.addChild(container);
 
-app.loader.add('bg', 'https://raw.githubusercontent.com/PavelLaptev/test-rep/master/grunge.jpg');
+app.loader.add('bg', 'https://raw.githubusercontent.com/hwajn/testing/main/ZODVoLj.jpg');
 app.loader.add('one', 'https://raw.githubusercontent.com/PavelLaptev/test-rep/master/dis-varOne.png');
 app.loader.load(function(loader, resources) {
     var tempBg = new PIXI.Sprite(resources.bg.texture);
@@ -26,11 +26,11 @@ app.loader.load(function(loader, resources) {
     bg = new PIXI.Sprite(rt[0]);
   
     brush = new PIXI.Sprite(resources.one.texture);
-    brush.anchor.set(0.5);
+    brush.anchor.set(0);
     displacementFilter = new PIXI.filters.DisplacementFilter(brush);
     container.filters = [displacementFilter];
-    displacementFilter.scale.x = 10;
-    displacementFilter.scale.y = 10;
+    displacementFilter.scale.x = 20;
+    displacementFilter.scale.y = 20;
   
     container.addChild(bg, brush);
   
@@ -60,8 +60,8 @@ function onPointerDown(event) {
 function onPointerMove(event) {
     const x = event.data.global.x;
     const y = event.data.global.y;
-    displacementFilter.scale.x = Math.atan(x - brush.x)*4;
-    displacementFilter.scale.y = Math.atan(y - brush.y)*4;
+    displacementFilter.scale.x = Math.atan(x - brush.x)*10;
+    displacementFilter.scale.y = Math.atan(y - brush.y)*10;
    
     brush.position.copy(event.data.global);
     if (dragging) snap(event);
