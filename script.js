@@ -49,10 +49,11 @@ function snap(event) {
     current = 2 - current;
 }
 
-var dragging = false;
+var dragging = true;
+var dragging = true;
 
 function onPointerDown(event) {
-    dragging = true; 
+    dragging = false; 
     onPointerMove(event);
 } 
  
