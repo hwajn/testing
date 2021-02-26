@@ -15,7 +15,7 @@ var bg, brush, displacementFilter;
 var container = new PIXI.Container(); 
 app.stage.addChild(container);
 
-app.loader.add('bg', 'https://raw.githubusercontent.com/hwajn/testing/main/ZODVoLj.jpg');
+app.loader.add('bg', 'https://raw.githubusercontent.com/hwajn/testing/main/homepage.jpg');
 app.loader.add('one', 'https://raw.githubusercontent.com/PavelLaptev/test-rep/master/dis-varOne.png');
 app.loader.load(function(loader, resources) {
     var tempBg = new PIXI.Sprite(resources.bg.texture);
