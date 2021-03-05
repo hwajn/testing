@@ -1,10 +1,14 @@
 <html>
 
 <style>
-
+body { width:100%; height:100%;overflow:hidden;position:absolute;overflow-y:hidden;} /* just to be sure these are full screen*/
 * {box-sizing:border-box; margin:0;padding:0;} 
-.invisalign{position:relative;text-align:center;background-color:red;}
-.invisalignbox{position:absolute;text-align: left;}
+.link{position:relative;text-align:center;background-color:red;margin:20px;line-height:40px;}
+.box {position:relative;z-index:5000000;top:-60%;}
+.complete {font-size:x-large;}
+
+
+
 </style>
 
 <head>
@@ -14,20 +18,47 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.3/pixi.min.js"> </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
   <script src="script.js"> </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
 <body>
 
-  <div class="invisalignbox">
-  <a href="https://hwajn.github.io/pageone/" class="invisalign" style="position:relative;top: -50vh;
-left:50vw;">just started invisalign</a>
-  </div>
+  <div class="box">
+  <a href="https://hwajn.github.io/pageone/" class="link complete"
+">just started invisalign</a><br><br><br>
+
+
+<a href="http://www.city-data.com/forum/food-drink/2406464-tongue-roof-mouth-injury-sweet-tarts-2.html" class="link" 
+">Tongue and Roof of Mouth Injury from Sweet Tarts (mild, taste, sugar)
+</a><br>
 
 
 
 
+    <a href="https://forums.penny-arcade.com/discussion/93479/i-think-chips-screwed-up-my-tongue-but-why" class="link" 
+  ">I think Chips screwed up my tongue, but why?</a><br>
+
+
+
+  <a href="http://www.city-data.com/forum/health-wellness/1612392-everything-i-eat-tastes-too-salty.html" class="link" 
+">Everything i eat tastes too salty? 
+</a><br>
+
+
+  <a href="https://ridemonkey.bikemag.com/threads/wtf-i-cant-taste-spicy-food.229068/" class="link" 
+">WTF, I can't taste spicy food?</a><br>
+
+
+  <a href="https://forum.starmen.net/forum/General/Discussion/Miracle-Berry-Tablets" class="link" 
+">Miracle Berry Tablets
+omg... they really work.</a><br>
+</div>
+
+
+<div class="tooltip">?
+  <span class="tooltiptext">Tooltip text</span>
+</div>
 
 
 </body>
